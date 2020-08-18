@@ -297,7 +297,7 @@ body {
   text-transform: uppercase;
   color: var(--third-text-color);
 }
-.subscribe-container {
+.subscribe-form {
   display: flex;
 }
 .subscribe-input {
