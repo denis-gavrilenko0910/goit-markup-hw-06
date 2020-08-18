@@ -511,6 +511,9 @@
           </ul>
         </div>
       </section>
+
+      <!-- Модальное окно -->
+
       <div class="backdrop is-hidden" data-modal>
         <div class="modal">
           <button class="button-close">
@@ -518,24 +521,55 @@
               <use href="./img/svg/sprite.svg#icon-cross"></use>
             </svg>
           </button>
-          <form>
-            <h5>Оставьте свои данные, мы вам перезвоним</h5>
+          <h5 class="form-element">
+            Оставьте свои данные, мы вам перезвоним
+          </h5>
+
+          <!-- Форма в модальном окне -->
+
+          <form class="form js-spkeaker-form" method="POST">
             <div class="input-container">
-              <label for="">
-                <input type="name" id="name" value="name" />
-                <input
-                  type="tel"
-                  id="tel"
-                  name="tel"
-                  value="tel"
-                  min="10"
-                  max="15"
-                />
-                <input type="email" id="email" name="email" value="email" />
-                <input type="text" />
-              </label>
+              <label for="name" class="input-item">Имя</label>
+              <input type="text" class="input-field" id="name" name="name" />
+            </div>
+            <div class="input-container">
+              <label for="tel" class="input-item">Телефон</label>
+              <input type="tel" class="input-field" id="tel" name="tel" />
+            </div>
+
+            <div class="input-container">
+              <label for="email" class="input-item">Почта</label>
+              <input type="email" class="input-field" id="email" name="email" />
+            </div>
+
+            <div class="input-container">
+              <label for="comments" class="comments input-item"
+                >Комментарий</label
+              >
+              <textarea
+                name="comments"
+                id="comments"
+                cols="30"
+                rows="12"
+                class="comments input-field"
+                placeholder="Введите текст"
+              ></textarea>
             </div>
           </form>
+          <div class="agreement-container">
+            <input
+              type="checkbox"
+              name="agree"
+              value="agree"
+              id="agree"
+              class="agree"
+            />
+            <label for="agree" class="agree"
+              >Соглашаюсь с рассылкой и принимаю
+              <a href="" class="contract">Условия договора</a></label
+            >
+          </div>
+          <button type="submit" class="button send">Отправить</button>
         </div>
       </div>
     </main>
@@ -562,6 +596,7 @@
         </div>
 
         <!--Блок с соц сетями-->
+
         <div class="socials-container">
           <b class="text-join">присоединяйтесь</b>
           <ul class="footer-socials">
@@ -615,11 +650,15 @@
             </li>
           </ul>
         </div>
+
         <!--Блок рассылка-->
+
         <div class="asign-container">
           <b class="subscribe-text">Подпишитесь на рассылку</b>
-          <input type="email" placeholder="E-mail" />
-          <input class="button" type="button" value="Подписаться" />
+          <div class="subscribe-container">
+            <input type="email" placeholder="E-mail" class="subscribe-input" />
+            <button type="submit" class="subscribe button">Подписаться</button>
+          </div>
         </div>
       </div>
     </footer>
