@@ -123,6 +123,10 @@ body {
 
 /* Шапка. Почта и телефон */
 .contacts {
+  padding: 0px;
+  margin: 0px;
+}
+.contacts {
   display: flex;
   align-items: center;
 

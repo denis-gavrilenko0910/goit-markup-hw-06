@@ -22,6 +22,7 @@
   --team-background-color: #f5f4fa;
   --footer-icon-fill: #ffffff;
   --cross-hover-fill: #2196f3;
+  --form-icon-fill: #2196f3;
 }
 
 /* Герой */
@@ -192,12 +193,14 @@
 
 .profession {
   margin-bottom: 16px;
+  text-align: center;
+
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
+
   line-height: 19px;
   color: var(--secondary-text-color);
-  text-align: center;
   letter-spacing: 0.03em;
 }
 .names {
@@ -239,11 +242,12 @@
 }
 .link {
   display: flex;
-  align-items: center;
-  justify-content: center;
   width: 44px;
   height: 44px;
   border-radius: 50%;
+
+  align-items: center;
+  justify-content: center;
 
   fill: var(--icon-fill);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -313,11 +317,13 @@
   top: 50%;
   padding: 40px;
   width: 528px;
+  border-radius: 4px;
+  justify-content: center;
 
   transform: translate(-50%, -50%);
   background-color: var(--main-background-color);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  border-radius: 4px;
+
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
 }
@@ -331,6 +337,7 @@ textarea {
   width: 30px;
   height: 30px;
   border-radius: 50%;
+
   cursor: pointer;
   background-color: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -350,6 +357,7 @@ textarea {
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
+
   line-height: 23px;
   text-align: center;
   letter-spacing: 0.03em;
@@ -369,33 +377,44 @@ textarea {
   margin-bottom: 20px;
 }
 .input-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.input-icon {
+  position: absolute;
+  left: 15px;
+  top: 29px;
+}
+.input-container:focus-within > .input-icon {
+  fill: var(--form-icon-fill);
 }
 .input-item {
+  display: inline-block;
   margin-bottom: 4px;
+
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
+
   line-height: 14px;
-
   letter-spacing: 0.01em;
-
   color: var(--secondary-text-color);
 }
 .input-field {
   border: 1px solid rgba(33, 33, 33, 0.2);
   height: 40px;
   border-radius: 4px;
-
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 11px 40px;
+  outline-color: transparent;
+  transition: outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.input-field:hover,
 .input-field:focus {
-  cursor: pointer;
-  border: 1px solid var(--second-hover-color);
+  outline-color: var(--accent-color);
 }
 .comments.input-item {
   font-style: normal;
@@ -410,41 +429,66 @@ textarea {
 .comments.input-field {
   height: 120px;
   padding: 12px 16px;
+
   font-style: normal;
   font-weight: normal;
+
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.01em;
-
   color: rgba(117, 117, 117, 0.5);
 }
 
 .agreement-container {
+  position: relative;
+  display: flex;
   margin-bottom: 30px;
+
+  align-items: center;
+  justify-content: center;
+
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
+
   line-height: 24px;
   letter-spacing: 0.03em;
 }
 
 .contract {
+  cursor: pointer;
+
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
-  line-height: 24px;
 
+  line-height: 24px;
   letter-spacing: 0.03em;
-  cursor: pointer;
   text-decoration-line: underline;
 
-  color: #2196f3;
+  color: var(--accent-color);
 }
-.agree {
-  cursor: pointer;
+
+.checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 .button.send {
   display: block;
   margin-right: auto;
   margin-left: auto;
+}
+
+.checkbox-icon {
+  position: absolute;
+  top: 5px;
+  left: 0px;
+  display: flex;
+  margin-right: 10px;
 }
