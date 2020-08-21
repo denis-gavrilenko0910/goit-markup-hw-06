@@ -533,7 +533,13 @@
               <svg class="input-icon" width="18" height="18">
                 <use href="./img/svg/sprite.svg#icon-person"></use>
               </svg>
-              <input type="text" class="input-field" id="name" name="name" />
+              <input
+                type="text"
+                pattern="^[А-Яа-яЁё\s]+$"
+                class="input-field"
+                id="name"
+                name="name"
+              />
             </div>
             <div class="input-container">
               <label for="tel" class="input-item">Телефон</label>
@@ -565,13 +571,14 @@
               ></textarea>
             </div>
           </form>
+
+          <!--  Custom checkbox -->
+
           <div class="agreement-container">
-            <label for="agree" class="agree">
-              <input type="checkbox" class="checkbox" />
-              <!-- <svg class="checkbox-icon" width="16" height="15">
-                <use href="./img/svg/sprite.svg#icon-checkbox"></use>
-              </svg> -->
-              <span class="checkbox-icon"></span>
+            <label for="checkbox" class="checkbox-label">
+              <input type="checkbox" class="checkbox-icon" id="checkbox" />
+              <span class="icon-checkbox"></span>
+
               Соглашаюсь с рассылкой и принимаю
               <a href="" class="contract">Условия договора</a>
             </label>
