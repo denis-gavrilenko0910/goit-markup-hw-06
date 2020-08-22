@@ -34,24 +34,29 @@
 .hero-text {
   margin-top: 0px;
   margin-bottom: 30px;
-  color: var(--hero-text-color);
-  text-transform: uppercase;
+
+  text-align: center;
+
   font-weight: 900;
   font-size: 44px;
 
-  text-align: center;
+  color: var(--hero-text-color);
+
+  text-transform: uppercase;
+
   letter-spacing: 0.06em;
 }
 .section-hero {
   display: flex;
-  padding-top: 200px;
-  padding-bottom: 200px;
-  text-align: center;
-
   max-width: 1600px;
   height: 600px;
+
   margin-left: auto;
   margin-right: auto;
+  padding-top: 200px;
+  padding-bottom: 200px;
+
+  text-align: center;
 
   background-color: var(--hero-background-color);
   background-image: linear-gradient(
@@ -70,11 +75,13 @@
   margin-top: 0px;
   margin-bottom: 50px;
   padding: 0px;
+
   text-align: center;
 
   font-style: normal;
   font-weight: 700;
   font-size: 36px;
+
   line-height: 42px;
   letter-spacing: 0.03em;
 }
@@ -108,6 +115,7 @@
 
   align-items: center;
   justify-content: center;
+
   background-color: var(--features-background-color);
 }
 
@@ -119,6 +127,7 @@
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
+
   line-height: 16px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -128,10 +137,12 @@
   margin: 0px;
   padding: 0px;
 
-  color: var(--secondary-text-color);
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
+
+  color: var(--secondary-text-color);
+
   line-height: 24px;
   letter-spacing: 0.03em;
 }
@@ -169,12 +180,14 @@
   text-align: center;
   padding: 27px 0px;
 
-  background: rgba(47, 48, 58, 0.8);
+  background-color: rgba(47, 48, 58, 0.8);
   color: var(--third-text-color);
+
   text-transform: uppercase;
 }
 
 /* Наша команда */
+
 .section:nth-child(3) {
   background-color: var(--team-background-color);
 }
@@ -205,18 +218,21 @@
 }
 .names {
   margin-bottom: 10px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 19px;
 
   text-align: center;
+
+  font-weight: 500;
+  font-size: 16px;
+
+  line-height: 19px;
   letter-spacing: 0.03em;
 }
 .team .list {
-  text-align: center;
+  width: calc((100% - 30px * 3) / 4);
   margin-right: 30px;
 
-  width: calc((100% - 30px * 3) / 4);
+  text-align: center;
+
   background-color: var(--main-background-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -225,7 +241,6 @@
 .list:nth-child(4n) {
   margin-right: 0px;
 }
-
 .photo {
   display: block;
 }
@@ -277,13 +292,13 @@
   display: flex;
   width: 170px;
   height: 90px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+
   align-items: center;
   justify-content: center;
 
-  border: 1px solid var(--border-color);
-  border-radius: 4px;
   fill: var(--icon-fill);
-
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -305,6 +320,7 @@
   left: 0;
   width: 100%;
   height: 100%;
+
   background-color: rgba(0, 0, 0, 0.2);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -320,12 +336,12 @@
   padding: 40px;
   width: 528px;
   border-radius: 4px;
+
   justify-content: center;
+  background-color: var(--main-background-color);
 
   transform: translate(-50%, -50%);
-  background-color: var(--main-background-color);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
 }
@@ -338,14 +354,15 @@ textarea {
   top: 7px;
   width: 30px;
   height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
 
-  cursor: pointer;
   background-color: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+
   transform: rotate(0deg);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
     transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
 }
 .button-close:hover,
 .button-close:focus {
@@ -356,12 +373,13 @@ textarea {
   padding: 0px;
   margin: 0px;
 
+  text-align: center;
+
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
 
   line-height: 23px;
-  text-align: center;
   letter-spacing: 0.03em;
 }
 .input-field {
@@ -411,7 +429,9 @@ textarea {
   height: 40px;
   border-radius: 4px;
   padding: 11px 40px;
+
   outline-color: transparent;
+
   transition: outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -422,11 +442,10 @@ textarea {
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
-  line-height: 14px;
-
-  letter-spacing: 0.01em;
-
   color: var(--secondary-text-color);
+
+  line-height: 14px;
+  letter-spacing: 0.01em;
 }
 .comments.input-field {
   height: 120px;
@@ -434,11 +453,12 @@ textarea {
 
   font-style: normal;
   font-weight: normal;
-
   font-size: 14px;
+
+  color: rgba(117, 117, 117, 0.5);
+
   line-height: 16px;
   letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
 }
 
 .agreement-container {
@@ -458,22 +478,21 @@ textarea {
 }
 
 .contract {
-  cursor: pointer;
-
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
+
+  color: var(--accent-color);
 
   line-height: 24px;
   letter-spacing: 0.03em;
   text-decoration-line: underline;
 
-  color: var(--accent-color);
+  cursor: pointer;
 }
 
 .checkbox-icon {
   /* Скрытый чекбокс */
-
   position: absolute;
   width: 1px;
   height: 1px;
@@ -488,19 +507,6 @@ textarea {
   margin-right: auto;
   margin-left: auto;
 }
-
-/*.checkbox-label::before {
-  position: absolute;
-  content: '';
-  width: 16px;
-  height: 15px;
-}
-
-.checkbox-icon:checked:focus + .checkbox-label::before {
-  background-image: url(../img/svg/iconcheck.svg);
-  background-color: var(--accent-color);
-}*/
-
 .checkbox-label {
   display: flex;
   align-items: center;
@@ -512,6 +518,7 @@ textarea {
   margin-right: 10px;
   border: 2px solid var(--primary-text-color);
   border-radius: 2px;
+
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
