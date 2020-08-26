@@ -273,7 +273,7 @@ body {
   display: flex;
   margin-bottom: 20px;
 
-  font-weight: 500;
+  font-weight: bold;
   font-style: normal;
   font-size: 14px;
 
@@ -325,7 +325,7 @@ body {
   display: block;
   margin-bottom: 20px;
 
-  font-weight: 500;
+  font-weight: bold;
   font-style: normal;
   font-size: 14px;
 
